@@ -11,6 +11,20 @@ class TransformExecutions(Transform):
         super().__init__()
 
     def transform(self):
+        """This transform method takes in the self.data dict of pandas.DataFrame 
+        and transforms the data as the user specifies, before finally setting self.data 
+        as a single pandas.DataFrame as output
+
+        It loads 3 data sets (executions, marketdata, refdata) and combines these to 
+        a final dataset 
+
+        Args:
+            -
+
+        Returns:
+            -
+
+        """
 
         # Check Metrics
         executions_count = self.data['executions']['Trade_id'].nunique()
