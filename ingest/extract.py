@@ -22,5 +22,5 @@ class ExtractFromParquet(Extract):
     def __init__(self) -> None:
         super().__init__()
 
-    def extract(self, file) -> None:
-        self.data = pandas.read_csv(file)
+    def extract(self, file, dataset_name) -> None:
+        self.data[dataset_name] = pandas.read_parquet(file)

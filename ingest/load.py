@@ -22,5 +22,5 @@ class LoadToCsv(Load):
     def __init__(self) -> None:
         super().__init__()
 
-    def load(self):
-        self.data.to_csv('output.csv', index=False)
+    def load(self, filename):
+        self.data.to_csv(filename, index=False)
